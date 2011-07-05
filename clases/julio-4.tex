@@ -10,9 +10,9 @@ pero en general no es así).
 Sea \(T\colon X\to Y\) lineal.
 Entonces las siguientes propiedades son equivalentes (¡tarea!):
 \begin{enumerate}
-\item \(T\) es continua en \(0 ∈ X\).
-\item \(T\) es continua en un \(x ∈ X\) fijo.
-\item \(T\) es continua sobre \(X\).
+  \item \(T\) es continua en \(0 ∈ X\).
+  \item \(T\) es continua en un \(x ∈ X\) fijo.
+  \item \(T\) es continua sobre \(X\).
 \end{enumerate}
 
 Caso particular importante: \(Y = \K\).
@@ -25,29 +25,29 @@ Más sobre esto más adelante.
 
 \(S, T ∈ L(X, \K)\), \(α, β ∈ \K\). Entonces:
 \begin{equation}
-αS + βT:\quad
-\bigl(αS + βT\bigr)(x)\defeq
-\underbrace{
-  \underbrace{α}_{∈\K}
-  \underbrace{S(x)}_{∈\K} +
-  \underbrace{β}_{∈\K}
-  \underbrace{T(x)}_{∈\K}
-}_{∈\K}
-\qquad ∀x ∈ X
+  αS + βT:\quad
+  \bigl(αS + βT\bigr)(x)\defeq
+  \underbrace{
+    \underbrace{α}_{∈\K}
+    \underbrace{S(x)}_{∈\K} +
+    \underbrace{β}_{∈\K}
+    \underbrace{T(x)}_{∈\K}
+  }_{∈\K}
+  \qquad ∀x ∈ X
 \end{equation}
 
 \(X^{*} = \bigl(L(X, \K), +, \cdot\K\bigr)\) es un \(\K\)-espacio vectorial.
 
 Ejemplo:
-\(X\defeq L^2([0, 1], \R) = 
+\(X\defeq L^2([0, 1], \R) =
 \bigl\{
   f\colon[0, 1]\to\R:
   f\text{ integrable} ∧ \int_0^1 \abs{f(x)}^2\,dx < 0
 \bigr\}
 \).
 \begin{align}
-φ_λ\colon X &\to\R \\
-f &\mapsto φ_λ(x)\defeq \int_0^1 f(x) λ(x)\,dx,
+  φ_λ\colon X &\to\R \\
+  f &\mapsto φ_λ(x)\defeq \int_0^1 f(x) λ(x)\,dx,
 \end{align}
 donde \(λ\) es una función continua definida sobre \([0, 1]\).
 Por ejemplo, si \(λ_k = x^k\), entonces
@@ -56,9 +56,9 @@ Diremos que \(λ(x)\) es una \emph{medida} sobre \([0, 1]\).
 
 Notar que \(L^2([0, 1], \R\) es un espacio vectorial sobre \(\R\).
 \begin{equation}
-f, g ∈ L^2([0, 1], \R),\quad
-α, β ∈ \R \quad⇒\quad
-\bigl(αf + βg\bigr)(t)\defeq αf(t) + βg(t).
+  f, g ∈ L^2([0, 1], \R),\quad
+  α, β ∈ \R \quad⇒\quad
+  \bigl(αf + βg\bigr)(t)\defeq αf(t) + βg(t).
 \end{equation}
 
 (Los espacios de Hilbert son su propio dual).
@@ -68,19 +68,19 @@ El espacio \(L^2([0, 1], \R\) es, en realidad, un \emph{espacio de Hilbert}
 (adelantándonos un poco a los temas que tenemos que discutir).
 El producto interno en este espacio viene dado por:
 \begin{equation}
-\label{eq:prod-interno-l2}
-\inprod{f, g}\defeq
-\int_0^1 f(x) g(x) λ(x)\,dx \quad ∈ \R\quad ∀f, g ∈ L^2([0, 1], \R).
+  \label{eq:prod-interno-l2}
+  \inprod{f, g}\defeq
+  \int_0^1 f(x) g(x) λ(x)\,dx \quad ∈ \R\quad ∀f, g ∈ L^2([0, 1], \R).
 \end{equation}
 Habitualmente se exige que \(λ(x) ≥ 0\) y \(\int_0^1 λ(x)\,dx = 1\).
 
 Que \eqref{eq:prod-interno-l2} esté bien definido
 es una consecuencia de la \emph{desigualdad de Cauchy-Schwartz}:
 \begin{equation*}
-\left\lvert \int_0^1 f(x) g(x) λ(x)\,dx \right\rvert
-≤
-\left( \int_0^1 \abs{f(x)}^2 λ(x)\,dx \right)^{\!1/2}
-\left( \int_0^1 \abs{g(x)}^2 λ(x)\,dx \right)^{\!1/2}
+  \left\lvert \int_0^1 f(x) g(x) λ(x)\,dx \right\rvert
+  ≤
+  \left( \int_0^1 \abs{f(x)}^2 λ(x)\,dx \right)^{\!1/2}
+  \left( \int_0^1 \abs{g(x)}^2 λ(x)\,dx \right)^{\!1/2}
 \end{equation*}
 Ademas, \(\norm{f} \defeq \bigl(\int_0^1 \abs{f(x)}^2 λ(x)\,dx\bigr)^{1/2}\)
 es una norma sobre \(L^2([0, 1], \R)\).
@@ -93,7 +93,7 @@ Los endomorfismos se pueden componer:
 \(f\colon X\to X\),
 \(g\colon X\to X\), entonces:
 \begin{equation}
-\bigl(f\circ g\bigr)(x) \defeq f\bigl(g(x)\bigr).
+  \bigl(f\circ g\bigr)(x) \defeq f\bigl(g(x)\bigr).
 \end{equation}
 
 En \(\End(X)\) tenemos tres operaciones:
@@ -107,10 +107,10 @@ Objetivo: definir bien una norma sobre \(L(X, Y)\).
 Lema: \(X, Y\) espacios normados, \(T\colon X\to Y\) lineal.
 Entonces:
 \begin{equation}
-\text{\(T\) es continua} \quad⇔\quad
-∃ C ≥ 0 \;
-∀ x ∈ X:\;
-\norm{T(x)} ≤ C\norm{x}.
+  \text{\(T\) es continua} \quad⇔\quad
+  ∃ C ≥ 0 \;
+  ∀ x ∈ X:\;
+  \norm{T(x)} ≤ C\norm{x}.
 \end{equation}
 
 Demostración:
@@ -124,21 +124,21 @@ Demostración:
 Consecuencia:
 hay muchas (¡infinitas!) constantes \(C > 0\) como dice el lema.
 \begin{equation}
-\{C ≥ 0: \norm{T(x)} ≤ C\norm{x}\;∀x ∈ X\} ≠ ∅.
+  \{C ≥ 0: \norm{T(x)} ≤ C\norm{x}\;∀x ∈ X\} ≠ ∅.
 \end{equation}
 
 Es del todo natural tomar el ínfimo de este conjunto,
 y esta es una norma llamada \emph{norma como operador}
 de la aplicación lineal y continua \(T\):
 \begin{equation}
-\norm{T}_{\text{op}} \defeq
-\inf \{C ≥ 0: \norm{T(x)} ≤ C\norm{x}\;∀x ∈ X\} ≠ ∅.
+  \norm{T}_{\text{op}} \defeq
+  \inf \{C ≥ 0: \norm{T(x)} ≤ C\norm{x}\;∀x ∈ X\} ≠ ∅.
 \end{equation}
 Demostraremos que \(\norm{T}\) también se puede escribir como:
 \begin{equation}
-\norm{T}_{\text{op}} =
-\sup_{0 ≠ x ∈ X} \frac{\norm{T(x)}_Y}{\norm{x}_X} =
-\sup_{\norm{x}_X = 1} \norm{T(x)}_Y.
+  \norm{T}_{\text{op}} =
+  \sup_{0 ≠ x ∈ X} \frac{\norm{T(x)}_Y}{\norm{x}_X} =
+  \sup_{\norm{x}_X = 1} \norm{T(x)}_Y.
 \end{equation}
 
 
