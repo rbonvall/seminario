@@ -1,0 +1,58 @@
+\section*{Miércoles 6 de julio}
+
+\(X\), \(Y\) espacios normados.
+\(T\colon X\to Y\) lineal y continua.
+\begin{equation}
+  \norm{T}\defeq\inf\bigl\{
+    C ≥ 0: \norm{T(x)} < C\norm{x}\quad ∀x ∈ X
+  \bigr\}
+\end{equation}
+Demostremos que:
+\begin{equation}
+  \sup_{0 ≠ x ∈ X} \frac{\norm{T(x)}}{\norm{x}} ≤ \norm{T}.
+\end{equation}
+
+\begin{align}
+  ∀C ∈ \{C ≥ 0: \ldots\}:\quad& \norm{T(x)} ≤ C\norm{x}\quad ∀x ∈ X \\
+    ⇒\quad& \frac{\norm{T(x)}}{\norm{x}} ≤ C \quad ∀ 0 ≠ x ∈ X \\
+    ⇒\quad& ∀C ∈ \{\ldots\}\quad ∀0 ≠ x ∈ X\quad
+            \underbrace{\frac{\norm{T(x)}}{\norm{x}}}_{\text{aplicar sup}}
+            ≤
+            \underbrace{C}_{\text{aplicar ínf}} \\
+    ⇒\quad& \sup_{0 ≠ x ∈ X} \frac{\norm{T(x)}}{\norm{x}} ≤
+            \inf_{C ∈ \{\ldots\}} C = \norm{T}
+\end{align}
+
+Supongamos que
+\(\displaystyle\sup_{0 ≠ x ∈ X} \frac{\norm{T(x)}}{\norm{x}} =: D < \norm{T}\).
+Por ejemplo: \(D = \norm{T - ε}\).
+\begin{align}
+  ⇒\quad& \norm{T(x)} ≤ D\norm{x}\quad ∀x ∈ X \\
+  ⇒\quad& D ∈ \{C > 0: \ldots\} \\
+  ⇒\quad& \norm{T}\defeq \inf\{C > 0: \ldots\} ≤ D < \norm{T}\quad\Rightarrow\!\Leftarrow.
+\end{align}
+
+Conclusión: \(\norm{T}\defeq\inf\{C > 0: \ldots\} = \sup\frac{\norm{T(x)}}{\norm{x}}\).
+
+Tarea: verificar que es una norma.
+
+\(X\) espacio normado.
+Una \emph{sucesión de Cauchy \(x_n\) en \(X\)} es una sucesión tal que:
+\begin{equation}
+  ∀ε > 0\quad
+  ∃N = N(ε) ∈\N\quad
+  ∀p, q ∈\N \text{ con } p, q > N:\quad
+  \norm{x_p - x_q} < ε.
+\end{equation}
+
+Definición:
+\((X. \norm{\;\cdot\;}\) se dice que es un \emph{espacio de Banach}
+ssi toda sucesión de Cauchy \(\{x_n\}\) en \(X\) converge en \(X\), i.e.,
+para toda sucesión de Cauchy \(x_n\) en \(X\):
+\begin{equation}
+  ∃ x ∈ X:\quad
+  x_n\xrightarrow{\norm{\;\cdot\;}} x
+  \text{ para }n → ∞.
+\end{equation}
+
+Próxima clase: \(C(X, \C)\) es un espacio de Banach.
