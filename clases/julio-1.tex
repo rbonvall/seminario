@@ -1,2 +1,123 @@
-\section*{Viernes 1 de julio}
+\section*{Viernes 1 de julio---Tarea con nota}
+
+\(X = \Q\) considerado como espacio vectorial sobre \(\Q\), i.e.:
+\begin{equation}
+  x, y ∈ \Q,\quad
+  α, β ∈ \Q\quad
+  →\quad
+  αx + βy ∈ \Q.
+\end{equation}
+
+Sea \(p ∈\N\) primo, \(p ≥ 2\).
+Entonces, todo \(x ∈ \Q\) se puede escribir como:
+\begin{equation}
+  x = p^k \frac{s}{t},\quad
+  s, t ∈ \Z,\quad
+  \gcd(s, t) = 1,\quad
+  p\nmid s,\quad
+  p\nmid t.
+\end{equation}
+(Todo esto significa que \(p^k \frac{s}{t}\)
+no se puede simplificar por ningún lado).
+
+Consideremos la «valuación» \(\abs{\pdot}_p\):
+\begin{align}
+  \abs{\pdot}_p \colon \Q &\to \Q \\
+  x &\mapsto \abs{x}_p = p^{-k}, \\
+  0 &\mapsto \abs{0}_p = 0.
+\end{align}
+
+Tarea. Verificar o refutar lo siguiente:
+\begin{enumerate}
+  \item \(\abs{x}_p ≥ 0\).
+  \item \(\abs{x}_p = 0 ⇔ x = 0\).
+  \item \(λ ∈ \Q \text{ (escalar)}, x ∈ Q ⇒
+          \abs{λx}_p = \abs{λ}_p \abs{x}_p.\)
+  \item \(x, y ∈ \Q ⇒
+          \abs{x + y}_p ≤ \abs{x}_p + \abs{y}_p\).
+    \hfill (\(\mathord{≠}\bigtriangleup\)'r)
+  \item \(x, y ∈ \Q ⇒
+          \abs{x + y}_p ≤ \sup\bigl\{\abs{x}_p, \abs{y}_p\bigr\}\).
+    \hfill (\(\mathord{≠}\bigtriangleup\)'r fuerte)
+  \item
+    Recordemos que una sucesión de Cauchy \(\{x_n\}_{n ∈ \N}\) en un espacio \(X\)
+    es una sucesión tal que:
+    \begin{equation}
+      ∀ε > 0\quad
+      ∃N ∈ \N\quad
+      ∀p, q ∈ \N\text{ con } p, q ≥ N:\quad
+      \norm{x_p - x_q} < ε.
+    \end{equation}
+    (Relajadamente: los términos se van «amontonando»).
+
+    Los números reales se definen
+    como los límites de las sucesiones de Cauchy en \(\Q\):
+    \begin{equation}
+      \R\sim\frac{
+        \text{conjunto de todas las sucesiones de Cauchy c/r al valor absoluto en \(\Q\)}
+      }{\rel},
+    \end{equation}
+    donde:
+    \begin{equation}
+      \rel\colon\quad
+      \{x_n\}\rel\{y_n\} \stackrel{\text{def}}{⇔}
+      \{x_n - y_n\}\text{ es una sucesión nula},
+    \end{equation}
+    i.e. \(x_n - y_n → 0 \).
+
+    Este proceso se llama \emph{completación de los racionales}
+    con respecto al valor absoluto.
+    Pero ahora tenemos las valuaciones \(\abs{\pdot}_p\),
+    que son otras formas de valores absolutos,
+    y podemos considerar sucesiones de Cauchy en \(\Q\) con respecto a ellas,
+    y completar \(\Q\) con respecto a ellas
+    para obtener la completación \(p\)-ádica de \(\Q\),
+    denotada por \(\Q_p\).
+
+    Demostrar o refutar: \(1 < p, q ∈ \N\text{ primos} ⇒ Q_p ≠ Q_q\).
+    (Ver Diodoné).
+\end{enumerate}
+
+Las operaciones de suma de vectores y multiplicación de vectores por escalares
+son continuas:
+%
+\begin{align}
+  +\colon X × X &\to X\\
+  (u, v) &\mapsto u + v
+\end{align}
+\begin{equation}
+  \left.
+  \begin{split}
+    u_n\xrightarrow{\norm{\pdot}} u &\text{ en \(X\) para } n → ∞ \\
+    v_n\xrightarrow{\norm{\pdot}} v &\text{ en \(X\) para } n → ∞ \\
+  \end{split}
+  \right\}
+  \quad\Longrightarrow\quad
+  u_n + v_n \xrightarrow{\norm{\pdot}} u + v
+  \text{ para } n → ∞
+\end{equation}
+%
+\begin{align}
+  \cdot\colon \K × X &\to X\\
+  (λ, x) &\mapsto λx
+\end{align}
+\begin{equation}
+  \left.
+  \begin{split}
+    λ_n\xrightarrow{\abs{\pdot}} λ &\text{ en \(\K\) para } n → ∞ \\
+    u_n\xrightarrow{\norm{\pdot}} u &\text{ en \(X\) para } n → ∞ \\
+  \end{split}
+  \right\}
+  \quad\Longrightarrow\quad
+  λ_n x_n \xrightarrow{\norm{\pdot}} λx
+  \text{ para } n → ∞
+\end{equation}
+
+Todas estas propiedades se cumplen
+cuando \((X, +, \cdot\K)\) es un espacio vectorial.
+
+\(∅ ≠ K ⊆ X\) compacto,
+i.e. todo recubrimiento abierto de K posee un recubrimiento finito.
+\(f\colon K\to\C\) función continua sobre \(K\).
+Entonces \(f\) es uniformemente  continua sobre \(K\).
 
