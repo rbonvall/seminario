@@ -1,0 +1,87 @@
+\section*{Lunes 20 de junio}
+
+\((X, \norm{\pdot}_X)\), \(Y ⊆ X\) s.espacio cerrado.
+\(\mathfrak{Y}: u\mathbin{\mathfrak{Y}} v ⇒ u - v ∈ Y\)
+es una relación de equivalencia.
+
+\begin{equation}
+  X/Y\defeq X/\mathfrak{Y} = \bigl\{[u]_{\mathfrak{Y}}: u ∈ X\}
+\end{equation}
+
+\begin{align}
+  π\colon X &\to X/Y,\text{ proyección canónica} \\
+  u &\mapsto [u]_Y
+\end{align}
+\(V\text{ abierto en }X/Y ⇔ π^{-1}(V)\text{ abierto en }X/Y\).
+
+Resulta que la topología inducida por \(π\) sobre \(X/Y\)
+es una topología nórmica:
+\begin{equation}
+  \norm{[X]_Y}_{X/Y} = \inf_{y ∈ Y} \norm{x + y}_X.
+\end{equation}
+
+Ya vimos la noción de continuidad en los espacios normados.
+\(f\colon X\to Y\) es continua en \(x_0 ∈ X\) ssi:
+\begin{equation}
+  ∀ ε > 0\quad
+  ∃ δ > 0\quad
+  ∀ u ∈ X\text{ con }\norm{u - x_0}_X < δ(x):\quad
+  \norm{f(u) - f(x_0)}_Y < ε,
+\end{equation}
+i.e. \(\lim_{u → 0} f(u) = f(x_0)\).
+
+Se dice que \(f\colon X\to Y\) es cerrada ssi:
+\begin{equation}
+  \graph(f)\defeq\{(x, y):\quad x ∈ X, y = f(x)\}
+\end{equation}
+es cerrado en \(X × Y\),
+donde \(X × Y\) posee en forma natural una topología nórmica.
+
+\(X × Y\) tiene una estructura de espacio vectorial:
+\begin{equation}
+  α (u, v) + β (x, y) \defeq (αu + βx, αv + βy),
+\end{equation}
+donde \(α, β ∈ \K,\, u, x ∈ X,\, v, y ∈ Y\). Además:
+\begin{equation}
+  \norm{(x, y)}_{X × Y} =
+  \Bigl\lVert
+    \underbrace{
+      \bigl(
+        \norm{x}_X, \norm{y}_Y
+      \bigr)
+    }_{∈ \R^2}
+  \Bigr\rVert_{\R^2 \text{ (cualquier norma)}}
+\end{equation}
+
+\(f\colon X\to Y\) se dice \emph{Lipschitz-continua} en \(X\) ssi:
+\begin{equation}
+  ∃ M > 0\quad
+  ∀ u, v ∈ X:\quad
+  \norm{f(u) - f(v)}_Y ≤ M\norm{u - v}_X.
+\end{equation}
+El ínfimo de todas estas constantes se denota por \(L\),
+y se llama \emph{constante de Lipschitz} de \(f\).
+
+\((X, \norm{\pdot})\) espacio normado, \(U ⊆ X\) usualmente compacto.
+\begin{align}
+  C(U, Y) &\defeq \{
+    f\colon U\to Y:\;
+    \text{\(f\) es continua sobre \(U\)}
+  \}, \\
+  BC(\bar{U}, Y) &\defeq \{
+    f\colon\bar{U}\to Y:\;
+    \text{\(f\) es continua sobre \(U\) y \(f\) es acotada en \(\bar{U}\)}
+  \}.
+\end{align}
+\(f\colon\bar{U}\to Y\) es uniformemente continua sobre \(\bar{U}\) ssi:
+\begin{equation}
+  ∀ ε > 0\quad
+  ∃ δ > 0\quad
+  ∀ x ∈ \bar{U}\quad
+  ∀ u ∈ \bar{U}\text{ con }\norm{u - x}_X < δ
+\end{equation}
+se tiene que \(\norm{f(u) - f(x)}_Y < ε\).
+Es decir, ahora \(δ\) no depende de \(x\).
+
+Problema: ¿las propiedades de continuidad y acotadura implican continuidad uniforme?
+¿Le ayuda si \(\bar{U}\) es compacto? (Ver Diodoné).
