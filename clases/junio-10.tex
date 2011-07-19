@@ -1,0 +1,80 @@
+\section*{Viernes 10 de junio---La topología cuociente}
+
+\((X, \T)\) espacio topológico, \(X ⊆ \powerset(X)\).
+
+\(\rel ⊆ X\times X\) relación de equivalencia en \(X\).
+
+Por ejemplo,
+\((\R, \T_C)\), donde \(\T_C\) es la topología generada
+por los intervalos:
+\begin{equation}
+  \T_C = \{
+    ]a, b[ ⊆ \R, a < b,\; a, b ∈ \R
+  \}
+\end{equation}
+y \(\rel\) es la siguiente relación de equivalencia
+(es refleja, simétrica y transitiva):
+\begin{equation}
+  \rel:\quad x\rel y \stackrel{\text{Def}}{⇔} x - y ∈ \Q.
+\end{equation}
+
+¿\(π\rel e\)? Esto es, ¿\(π - e ∈ \Q\)?
+(¡Demostrar que un número es irracional es muy complicado!).
+
+Sabemos que \(π\rel π ± 1, π ± \frac{191}{273},\) etc.
+
+Podemos obtener la clase de equivalencia de \(π\) en la relación \(\rel\):
+\begin{equation}
+  [π]_{\rel} = \{ π + \frac{p}{q}: \quad p, q ∈ \Z,\quad q > 0 \}.
+\end{equation}
+\begin{equation}
+  (π, π + {\textstyle \frac{p}{q}}) ∈ \rel ⊂ \R\times\R,\quad p, q ∈ \Z,\quad q > 0.
+\end{equation}
+\(\R\) queda particionado en clases de equivalencia:
+\begin{align}
+  π\colon \R &\to \R/\rel, \\
+  x &\mapsto [x]_{\rel}.
+\end{align}
+\(\pi\) (¡no el número!) se llama \emph{proyección}.
+
+En general:
+\begin{align}
+  π\colon X &\to X/\rel, \\
+  x &\mapsto [x]_{\rel}.
+\end{align}
+Tenemos una topología \(\T\) en el espacio \(X\),
+y queremos definir una topología adecuada en el espacio \(X/\rel\).
+
+\begin{equation}
+  \mathscr{F}\defeq\{ V ⊆ X/\rel:\quad π^{-1}(V) ∈ \T \}
+\end{equation}
+¿Es \(\mathscr{F}\) una topología?
+\begin{enumerate}
+    \item
+      ¿\(∅ ∈ \mathscr{F}\)?
+      Tomemos \(V = ∅\).
+      \begin{equation}
+        π^{-1}(∅) = \{x ∈ X: π(x) ∈ ∅\} = ∅ ∈ \T ⇒ ∅ ∈ \mathscr{F}.
+      \end{equation}
+
+      ¿\(X/\rel ∈ \mathscr{F}\)?
+      Tomemos \(V = X/\rel\).
+      \begin{equation}
+        π^{-1}(X/\rel) = \{x ∈ X: π(x) ∈ X/\rel\} = X ∈ \T ⇒ X/\rel ∈ \mathscr{F}.
+      \end{equation}
+    \item
+      \(V_α ⊆ X/\rel, α ∈ \mathscr{A}\).
+      ¿\(\bigcup_{α ∈ \mathscr{A}} V_α ∈ \mathscr{F}\)?
+
+      (Demostración por transcribir).
+
+    \item
+      ¿\(\bigcap_{k = 1}^{n} V_k ∈ \mathscr{F}\)?
+      Tarea.
+\end{enumerate}
+
+Yapa. \(π\colon (X, \T)\to (X/\rel, \mathscr{F})\) es automáticamente continua,
+ya que está construída de modo que las preimágenes de abiertos
+son abiertos (\(∈ \mathscr{F}\)).
+Más aún, \(\mathscr{F}\) es la topología más gruesa de \(X/\rel\)
+que hace continua la proyección.
