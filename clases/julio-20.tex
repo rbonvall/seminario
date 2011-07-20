@@ -62,4 +62,61 @@ Con esta norma, \(\{s_n\}\) sí converge.
 
 (Falta poner diagrama).
 
-Con esta norma, \(\{s_n\}\) sí converge.
+\(X ≠ ∅\) espacio topológico compacto.
+
+En los compactos vale el \emph{teorema de intersección de Cantor}.
+\(\mathcal{Z} = \{A: A\text{ cerrado}\}\) centrado,
+i.e. la intersección de cualquier subsistema finito de \(\mathcal{Z}\) es no vacía:
+\begin{equation}
+  \bigcap_{k = 1}^{n} A_k ≠ ∅\quad
+  ∀\text{ subsistema } \{A_k\}_{k = 1}^{n ∈ \N} ⊂ \Z,
+\end{equation}
+Entonces, \(\bigcap_{A ∈ \mathcal{Z}} A ≠ ∅\).
+
+Ejemplos de compactos:
+\begin{itemize}
+    \item el intervalo \([0, 1] ⊂ \R\),
+    \item el disco unitario \(\mathbb{D} ⊂ \C\) (incluyendo su borde),
+    \item la circunferencia unitaria \(S = ∂\mathbb{D} ⊂ \C\).
+\end{itemize}
+
+\(X ≠ ∅\) espacio topológico compacto.
+\begin{equation}
+  C(X, \R)\defeq
+  \{f\colon X\to\R \mid f\text{ es continua}\}.
+\end{equation}
+Recordemos que «\(f\) es continua» significa que:
+\begin{equation}
+  ∀V ⊆ \R\text{ abierto}:
+  f^{-1}(V) ⊂ X\text{ es abierto en }X.
+\end{equation}
+
+Definamos una estructura de espacio vectorial en \(\R\) sobre \(C(X, \R)\):
+\begin{equation}
+  \label{eq:comb-lineal-cxr}
+  \bigl(αf + βg\bigr)(x)\defeq
+  \underbrace{αf(x) + βg(x)}_{∈ \R}\quad
+  ∀x ∈ X,\; α, β ∈ \R,\; f, g ∈ C(X, \R).
+\end{equation}
+\eqref{eq:comb-lineal-cxr} define una función \(αf + βg\colon X\to\R\).
+Hay que verificar que ésta es una función continua, i.e., que:
+\begin{equation}
+  \bigl(αf + βg\bigr)^{-1}(]a, b[)\defeq
+  \{x ∈ X: αf(x) + βg(x) ∈ ]a, b[\}
+\end{equation}
+es un abierto en \(X\) (¡tarea!).
+
+Definamos ahora una norma sobre este espacio vectorial:
+\begin{align}
+  \norm{\pdot}\colon C(X, \R) &\to\R \\
+  f &\mapsto\norm{f}_{*}\defeq
+    \sup_{x ∈ X}\abs{f(x)}
+    \stackrel{†}{=}
+    \max_{x ∈ X}\abs{f(x)}.
+\end{align}
+La igualdad \(†\) es consecuencia del teorema de Weierstraß:
+una función continua en un compacto alcanza su máximo.
+Hay que verificar que \(\norm{\pdot}\) efectivamente es una norma (¡tarea!).
+
+\(\bigl(C(X, \R), \norm{\pdot}\bigr)\) espacio vectorial normado.
+Por demostrar: éste es un espacio de Banach.
