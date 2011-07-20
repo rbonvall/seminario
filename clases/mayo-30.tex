@@ -1,0 +1,70 @@
+\section*{Lunes 30 de mayo}
+
+\(X ≠ ∅\) conjunto, \(Y, \T_Y\) espacio topológico.
+
+\(f\colon X\to Y\) pull-back de la topología \(\T_Y\) al conjunto \(X\):
+\begin{align}
+  \T_X      &\defeq \{f^{-1}(V): V ∈ \T\}, \\
+  f^{-1}(V) &\defeq \{x ∈ X: f(x) ∈ V\} ⊆ X.
+\end{align}
+\(\T_X\) es la topología débil de \(X\).
+\(f\) es automáticamente continua en \(\T_X\).
+
+(Una función es o no continua
+dependiendo de la topología en la que está definida).
+
+Lo mismo pero con una familia de funciones:
+\begin{equation}
+  X \xrightarrow{f_α} (Y_α, \T_Y^α),\quad α ∈ \mathscr{A}
+\end{equation}
+
+...
+
+Otrosí.
+\(X ≠ ∅\), sea \(\rel\) una relación de equivalencia sobre \(X\).
+Consideremos \(X/\rel \defeq\)
+conjunto de todas las clases de \(\rel\)-equivalencia
+en \(X = \{ {[x]}_{\rel}: x ∈ X\}\).
+
+\begin{align}
+  \label{eq:}
+  π\colon X &\to Y = X/\rel \\
+  x &\mapsto [x]_{\rel}.
+\end{align}
+Supongamos que \(X\) tenga una topología \(\T\).
+Problema: definir una topología sobre \(Y\)
+tal que \(π\) sea continua.
+\begin{align}
+  π^{-1}(y) &= \{ ξ ∈ X: ξ\rel x\} \quad\xrightarrow{π}\quad [x]_{\rel} = y \\
+  π(\underbrace{U}_{∈ \T_X}) &⊂ X/\rel \\
+  \mathfrak{M}_Y &= \{ π(U): U ∈ \T \} \\
+  π(u) &= [u]_{\rel}.
+\end{align}
+
+(Falta diagrama).
+
+\begin{equation}
+  \mathscr{L}([0, 1], \R) = \{ f\colon [0, 1]\to\R:
+  \text{\(f\) es medible e integrable} \}.
+\end{equation}
+\begin{equation}
+  f = g \quad⇔\quad \int_0^1 \abs{f(x) - g(x)}\,dx = 0
+\end{equation}
+es relación de equivalencia \(→ \mathscr{L}(\ldots)/\rel = L^1(\ldots)\).
+
+\((X, \T)\) espacio topológico.
+Sea una familia \(\mathfrak{A}\) de conjuntos abiertos (i.e. \(U ∈ \T\)) de \(X\).
+Se dice que \(\mathfrak{A}\) es un \emph{recubrimiento abierto de \(X\)}
+ssi \(\bigcup_{U ∈ \mathfrak{A}} U = X\).
+
+Se dice que \(X\) es \emph{compacto} ssi
+todo recubrimiento abierto de \(X\)
+posee un subrecubrimiento finito.
+
+Se dice que \(K ⊆ X\) es compacto ssi \((K, \T_K)\) es compacto,
+donde \(\T_K\) es la topología que \(K\) hereda de \(X\).
+
+Teorema.
+En \(\R^n\),
+los conjuntos compactos son exactamente los conjuntos cerrados y acotados
+(Heine, Borel, Lebesgue).
