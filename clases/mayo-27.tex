@@ -32,8 +32,54 @@ que satisface:
 Ejemplo: en \(\R\):
 \begin{equation}
   \mathfrak{M}\defeq
-    \bigl\{ ] a, b[: a, b ∈ \R \bigr\} \cup
-    \bigl\{ ] a, ∞[: a    ∈ \R \bigr\} \cup
+    \bigl\{ ] a, b[: a, b ∈ \R \bigr\} \;\cup\;
+    \bigl\{ ] a, ∞[: a    ∈ \R \bigr\} \;\cup\;
     \bigl\{ ]-∞, b[: b    ∈ \R \bigr\}
 \end{equation}
 (\(\T_{\mathfrak{M}}\) es la topología de Borel).
+
+(Falta diagrama de función \(f\) de a continuación).
+
+\(
+  ]{-∞}, -\frac{1}{2}[ \;∪\;
+  ]\frac{1}{2}, {+∞}[  \;∪\;
+  \{0\}
+\), ¿es abierto? No, por la presencia de \(\{0\}\).
+Luego, \(f\) no es continua.
+\(f\colon \R\setminus\{0\}\to\R\setminus\{0\}\) sí es continua.
+
+\(X ≠ ∅\), \((Y, \T_Y)\) espacio topológico.
+No tiene sentido decir si una función \(f\colon X\to Y\) es o no continua,
+porque no hay topología en \(X\).
+
+Problema: construir una topología en \(X\) que haga continua \(f\).
+¡Mejor la más gruesa!
+
+\(\T_X\defeq\{f^{-1}(V): V ∈ \T_Y\}\), ¿será topología?
+\begin{enumerate}
+  \item ¿\(∅ ∈ \T_X\)? \(f^{-1}(∅) = ∅ ∈ \T_X\). \\
+        ¿\(X ∈ \T_X\)? \(f^{-1}(X) = X ∈ \T_X\). \\
+  \item \(U_α ∈ \T_X\; ∀α ∈ \mathscr{A}\).
+    Por demostrar:
+    \(\bigcup_{α ∈ \mathscr{A}} U_α ∈ \T_X\).
+    \begin{equation}
+      U_α ∈ \T_X
+        \quad⇒\quad U_α = f^{-1}(V_α) \text{ con } V_α ∈ \T_Y\quad ∀α ∈ \mathscr{A}
+    \end{equation}
+    \begin{equation}
+      x ∈ \bigcup_{α ∈ \mathscr{A}} U_α
+      \stackrel{?}{=}
+      f^{-1}\Bigl(
+        \underbrace{\bigcup_{α ∈ \mathscr{A}} V_α}_{∈ \T_Y}
+      \Bigr)
+    \end{equation}
+    \begin{align}
+      x ∈ \bigcup_{α ∈ \mathscr{A}} U_α\quad
+        ⇔\quad& ∃α ∈ \mathscr{A}: x ∈ U_α = f^{-1}(V_α) \\
+        ⇔\quad& f(x) ∈ V_{α_0} \\
+        ⇔\quad& f(x) ∈ \bigcup_{α ∈ \mathscr{A}} V_α \\
+        ⇔\quad& x ∈ f^{-1}(\bigcup_{α ∈ \mathscr{A}} V_α).
+    \end{align}
+  \item
+    (Falta diagrama).
+\end{enumerate}
