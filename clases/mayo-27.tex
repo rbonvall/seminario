@@ -1,0 +1,39 @@
+\section*{Viernes 27 de mayo}
+
+(Falta transcribir una parte).
+
+Objetivo del estudio de las topologías:
+hacer más sólida la noción de continuidad.
+
+Primer año: \(f\colon\R\to\R\) es continua ssi:
+\begin{equation}
+  ∀ε > 0\quad
+  ∀x ∈ \R\quad
+  ∃δ = δ(x, ε)\quad
+  ∀y ∈ \R\text{ con }\abs{y - x} < δ:\quad
+  \abs{f(y) - f(x)} < ε.
+\end{equation}
+
+Espacio métrico:
+conjunto equipado con función \(σ\colon X\to\R\)
+que satisface:
+\begin{enumerate}
+  \item \(σ(x, y) ≥ 0\quad ∀x, y ∈ X\),
+  \item \(σ(x, z) ≤ σ(x, y) + σ(y, z)\quad ∀x, y, z ∈ X\),
+  \item \(σ(x, y) = 0 ⇔ x = y\).
+\end{enumerate}
+
+\((X, \T_X), (Y, \T_Y)\) espacios topológicos.
+\(f\colon X\to Y\) se dice continua ssi:
+\begin{equation}
+  ∀V ∈ \T_Y:\quad
+  f^{-1}(V) ∈ \T_X.
+\end{equation}
+Ejemplo: en \(\R\):
+\begin{equation}
+  \mathfrak{M}\defeq
+    \bigl\{ ] a, b[: a, b ∈ \R \bigr\} \cup
+    \bigl\{ ] a, ∞[: a    ∈ \R \bigr\} \cup
+    \bigl\{ ]-∞, b[: b    ∈ \R \bigr\}
+\end{equation}
+(\(\T_{\mathfrak{M}}\) es la topología de Borel).
