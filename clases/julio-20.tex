@@ -1,0 +1,65 @@
+\section*{Miércoles 20 de julio}
+
+\((X, \norm{\pdot})\) espacio normado.
+Se dice que es un \emph{espacio de Banach} ssi
+toda sucesión de Cauchy en \(X\) converge en \(X\).
+
+\(\{x_n\}_{n ∈ \N}\) sucesión en \(X\), se dice que es de Cauchy ssi:
+\begin{equation}
+  ∀ ε > 0\quad
+  ∃ N ∈ \N\quad
+  ∀ p, q ∈ \N\text{ con }p, q ≥ N:\quad
+  \norm{x_p - x_q} < ε.
+\end{equation}
+
+Ejemplo.
+Consideremos en \((\Q, \abs{\pdot})\)
+la sucesión:
+\begin{equation}
+  x_n = \text{«\(n\) primeros dígitos de \(π\)»},
+\end{equation}
+i.e.:
+\begin{equation}
+  \{x_n\}_{n ∈ \N} = \{3,\;3.1,\;3.14,\;3.141,\;3.1415,\;3.14159,\;\ldots\}.
+\end{equation}
+\(\{x_n\}_{n ∈ \N}\) es sucesión de Cauchy en \(\Q\),
+pero no converge en \(\Q\),
+pues \(\lim_{n → ∞} x_n = π \not∈ \Q\).
+Se dice que \(\Q\) no es completo.
+(Tarea: demostrar que \(π\) es irracional).
+
+Consideremos la serie armónica \(s_n = \sum_{k = 1}^n \frac{1}{k}\).
+Claramente, \(s_n ∈ \Q\).
+No obstante, consideremos esta sucesión en \(\R\).
+\begin{equation}
+  s_n - s_m = \sum_{k = n + 1}^{m} =
+  \frac{1}{n + 1} +
+  \frac{1}{n + 2} +
+  \cdots +
+  \frac{1}{m}.
+\end{equation}
+Esta diferencia puede ser tan grande como se quiera,
+eligiendo \(m\) suficientemente grande.
+\(\{s_n\}\) no es una sucesión de Cauchy.
+
+Tarea: demostrar que:
+\begin{equation}
+  \left\{
+    \sum_{k = 1}^n \frac{1}{k} - \log n
+  \right\}_{n ∈ \N}
+\end{equation}
+converge.
+El límite es la constante de Euler-Mascheroni \(γ\).
+
+Tarea: demostrar que la sucesión\(\{\sin n: n ∈ \N\} ⊆ [-1, 1]\)
+(que es divergente) es densa en \([-1, 1]\).
+
+En lugar del valor absoluto,
+consideremos como norma
+la distancia entre los puntos sobre la circunferencia
+de la proyección estereográfica.
+Con esta norma, \(\{s_n\}\) sí converge.
+
+(Falta poner diagrama).
+
+Con esta norma, \(\{s_n\}\) sí converge.
