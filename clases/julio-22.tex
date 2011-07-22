@@ -1,0 +1,52 @@
+\section*{Viernes 22 de julio}
+
+En \(\R^n\) o \(\C^n\) o espacios de dimensión finita,
+los conjuntos compactos son exactamente los conjuntos cerrados y acotados.
+
+Por ejemplo,
+en \(\R\) los intervalos cerrados \([a, b]\) son compactos.
+En \(\C\), los discos cerrados:
+\begin{equation}
+  \bar{D}(z_0, ρ) = \{
+    z ∈ \C:
+    \abs{z - z_0} ≤ ρ
+  \},\quad
+  ρ ≥ 0.
+\end{equation}
+En \(\R^n\), las bolas cerradas:
+\begin{equation}
+  \bar{B}(x_0, ρ) = \{
+    x ∈ \R^n:
+    \norm{x - x_0}_2 ≤ ρ
+  \}.
+\end{equation}
+
+Colocando estructura de espacio vectorial:
+\begin{equation}
+  α, β ∈ \C,\quad
+  f, g ∈ C(X, \C)\quad
+  \rightsquigarrow\quad
+  αf + βg.\quad
+\end{equation}
+Dado un abierto \(V ⊆ \C\),
+hay que probar que:
+\begin{equation}
+  \bigl(αf + βg\bigr)^{-1}(V) ∈ \T,
+\end{equation}
+i.e., que \(\bigl(αf + βg\bigr)^{-1}(V)\) es abierto.
+
+(Falta el diagrama).
+
+Colocando estructura de norma sobre \(C(X, \C)\):
+\begin{align}
+  \norm{\pdot}\colon C(X, \C) &\to\R \\
+  f &\mapsto\norm{f}\defeq
+    \sup_{x ∈ X}\abs{f(x)}.
+\end{align}
+Teorema de Weierstraß:
+en compactos se cumple que \(
+  \sup_{x ∈ X}\abs{f(x)} =
+  \max_{x ∈ X}\abs{f(x)}
+\).
+
+
