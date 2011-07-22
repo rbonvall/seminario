@@ -1,6 +1,23 @@
 \section*{Viernes 27 de mayo}
 
-(Falta transcribir una parte).
+\(X, \mathfrak{M} ∈ \powerset(X)\).
+\begin{equation}
+  \T_{\mathfrak{M}} =
+  \bigcap
+  \underbrace{
+    \{\T \;|\; \T\text{ topología de \(X\) tal que }\mathfrak{M} ⊆ \T\}
+  }_{\mathscr{S}}
+\end{equation}
+
+\begin{align}
+  V_i ∈ \T ∈ \mathscr{S}\quad
+  ∀i = 1, \ldots, n
+    &\quad⇒\quad \bigcap_{i = 1}^{n} V_i ∈ \T\quad ∀\T ∈ \mathscr{S} \\
+    &\quad⇒\quad \bigcap_{i = 1}^{n} V_i ∈ \bigcap\mathscr{S} \\
+    &\quad⇒\quad \bigcap_{i = 1}^{n} V_i ∈ \T_\mathfrak{M}.
+\end{align}
+
+\(\T_\mathfrak{M}\) es la topología más gruesa que contiene a la familia \(\mathfrak{M}\).
 
 Objetivo del estudio de las topologías:
 hacer más sólida la noción de continuidad.
